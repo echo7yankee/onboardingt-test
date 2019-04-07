@@ -1,0 +1,227 @@
+.container {
+  width: 114rem;
+  background-color: var(--main-color);
+  margin: 0rem auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px 0 rgba(32, 48, 60, 0.1);
+  padding: 5rem 8rem 6rem 8rem;
+}
+
+.section-titles {
+  text-align: center;
+}
+
+.section-titles h3 {
+  color: var(--dark-blue-color);
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 48px;
+}
+
+.section-titles p {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  line-height: 23px;
+}
+
+.section-opening-hours {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: var(--text-color);
+}
+
+.opening-hours {
+}
+
+.opening-hours-items {
+  display: flex;
+}
+
+.opening-hours-time-container {
+  display: flex;
+  align-items: center;
+}
+
+.opening-hours-time:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--dark-blue-color);
+}
+
+.delete-icon {
+  margin-top: 4rem;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  fill: #d8000c;
+}
+
+.opening-hours-item {
+  border: 1px solid #e0e4eb;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  padding: 1rem;
+  height: 4.6rem;
+  border-radius: 2px;
+  margin: 0.5rem 0.8rem 0 0;
+  cursor: pointer;
+  color: var(--dark-blue-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.opening-hours-input {
+  width: 12rem;
+  color: var(--text-color);
+  font-size: 1.6rem;
+}
+
+.opening-hours-input:focus {
+  outline: none;
+}
+
+.weekdays {
+  width: 6.1rem;
+}
+
+.weekdays-active {
+  background-color: var(--blue-color);
+  color: var(--main-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.time {
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  align-items: center;
+  cursor: text;
+}
+
+.no-border-right {
+  border-right: none;
+}
+
+.no-cursor-pointer {
+  cursor: default;
+}
+
+.section-add-opening-hours {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #c1cad6;
+  border-radius: 2px;
+  height: 4.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.add-opening-hours-btn {
+  background-color: transparent;
+  font-size: 1.6rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: var(--blue-color);
+  cursor: pointer;
+}
+
+.add-opening-hours-btn:focus {
+  outline: none;
+}
+
+.icon-blue {
+  margin-right: 0.8rem;
+  fill: var(--blue-color);
+}
+
+.icon-white {
+  fill: var(--main-color);
+}
+
+.icon-ml {
+  margin-right: 0;
+  margin-left: 0.8rem;
+}
+
+.section-additional-info {
+  margin-top: 6rem;
+}
+
+.section-additional-info label {
+  display: block;
+}
+
+.additional-info-textarea {
+  border: 1px solid #e0e4eb;
+  background-color: #fafbfc;
+  height: 23rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.additional-info-textarea:focus {
+  outline: none;
+}
+
+.additional-info-textarea::placeholder {
+  font-family: "Roboto", sans-serif;
+  line-height: 2.1rem;
+  color: var(--text-color);
+}
+
+.align-right {
+  text-align: right;
+}
+
+.section-forward {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.section-forward-btn:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.section-forward-btn {
+  height: 4.6rem;
+  border-radius: 2px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  width: 10.9rem;
+  cursor: pointer;
+}
+
+.section-forward-btn:focus {
+  outline: none;
+}
+
+.btn-back {
+  border: 1px solid var(--blue-color);
+  color: var(--blue-color);
+  background-color: var(--main-color);
+}
+
+.btn-next {
+  background-color: var(--blue-color);
+  color: var(--main-color);
+}
