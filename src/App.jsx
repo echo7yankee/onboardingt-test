@@ -8,7 +8,8 @@ class App extends Component {
   state = {
     openingHours: [createOpeningHours()],
     message: "",
-    maxLimit: 230
+    maxLimit: 230,
+    valid: false
   };
 
   handleMessage = e => {
@@ -19,18 +20,27 @@ class App extends Component {
   };
 
   handleInput = (e, id) => {
-    const newOpeningHours = this.state.openingHours.map(openingHour => {
-      if (openingHour.id === id) {
-        openingHour = {
-          ...openingHour,
-          [e.target.id]: e.target.value
-        };
-      }
-      return openingHour;
-    });
+    //const rules = new RegExp(/^[0-9-:]+$/);
+    const rules = new RegExp(/^[0-9-:]+$|^$/);
+
+    const valid = rules.test(e.target.value);
+    console.log(valid);
+
+    if (valid === false) {
+      return;
+    }
 
     this.setState({
-      openingHours: newOpeningHours
+      openingHours: this.state.openingHours.map(openingHour => {
+        if (openingHour.id === id) {
+          openingHour = {
+            ...openingHour,
+            [e.target.id]: e.target.value
+          };
+        }
+
+        return openingHour;
+      })
     });
   };
 
@@ -64,6 +74,20 @@ class App extends Component {
     });
   };
 
+  handleDeleteItem = id => {
+    this.setState({
+      openingHours: this.state.openingHours.filter(openingHour => {
+        return openingHour.id !== id;
+      })
+    });
+  };
+
+  handleClearItems = () => {
+    this.setState({
+      openingHours: [createOpeningHours()]
+    });
+  };
+
   destroy = () => {
     this.setState({
       openingHours: [createOpeningHours()],
@@ -78,7 +102,7 @@ class App extends Component {
   };
 
   render() {
-    // console.log(this.state.openingHours);
+    //console.log(this.state.openingHours);
     // console.log(this.state.message);
     // console.log(this.state.maxLimit);
 
@@ -89,9 +113,12 @@ class App extends Component {
           <Titles />
           <form onSubmit={this.handleSubmit}>
             <OpeningHours
+              length={this.state.openingHours.length}
               handleInput={this.handleInput}
               handleDays={this.handleDays}
               handleMessage={this.handleMessage}
+              handleDeleteItem={this.handleDeleteItem}
+              handleClearItems={this.handleClearItems}
               message={this.state.message}
               addOpeningHours={this.addOpeningHours}
               openingHours={this.state.openingHours}

@@ -1,7 +1,13 @@
 import React from "react";
-import { CalendarIcon, ClockIcon } from "../../img/svg/Icons";
+import { CalendarIcon, ClockIcon, DeleteIcon } from "../../img/svg/Icons";
 
-const OpeningHoursItem = ({ handleInput, handleDays, openingHour }) => {
+const OpeningHoursItem = ({
+  handleInput,
+  handleDays,
+  handleDeleteItem,
+  openingHour,
+  index
+}) => {
   return (
     <div className="section-opening-hours">
       <div className="opening-hours">
@@ -41,7 +47,6 @@ const OpeningHoursItem = ({ handleInput, handleDays, openingHour }) => {
               className="opening-hours-item opening-hours-input time"
               value={openingHour.from}
               onChange={e => handleInput(e, openingHour.id)}
-              required
             />
           </div>
         </div>
@@ -55,19 +60,21 @@ const OpeningHoursItem = ({ handleInput, handleDays, openingHour }) => {
             <input
               type="text"
               id="to"
-              className="opening-hours-item opening-hours-input time"
+              className="opening-hours-item opening-hours-input time mr-big"
               value={openingHour.to}
               onChange={e => handleInput(e, openingHour.id)}
-              required
             />
           </div>
         </div>
       </div>
-      {/* {index > 0 ? (
-        <span className="display-block">
+      {index > 0 ? (
+        <span
+          onClick={() => handleDeleteItem(openingHour.id)}
+          className="ml mb-small"
+        >
           <DeleteIcon icon={"icon delete-icon"} />
         </span>
-      ) : null} */}
+      ) : null}
     </div>
   );
 };

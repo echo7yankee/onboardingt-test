@@ -2,7 +2,8 @@
   --main-color: #ffffff;
   --dark-blue-color: #234460;
   --blue-color: #0f95fc;
-  --title-text-color: #234460;
+  --hover-blue-color: #0a67ad;
+  --title-text-color: #0158a3;
   --text-color: #646e80;
   --inactive-color: #c1cad6;
 }
@@ -48,4 +49,16 @@ body {
   );
   padding-bottom: 5rem;
   overflow: hidden;
+}
+
+.mb-small {
+  margin-bottom: 1.2rem;
+}
+
+.ml {
+  margin-left: 2rem;
+}
+
+.mr-small {
+  margin-right: 3rem;
 }

@@ -1,12 +1,20 @@
 import React from "react";
-import { AddIcon, BackArrowIcon, NextArrowIcon } from "../../img/svg/Icons";
+import {
+  AddIcon,
+  BackArrowIcon,
+  NextArrowIcon,
+  ClearIcon
+} from "../../img/svg/Icons";
 import "./OpeningHours.css";
 import OpeningHoursItem from "./OpeningHoursItem";
 
 const OpeningHours = ({
+  length,
   handleInput,
   handleDays,
   handleMessage,
+  handleDeleteItem,
+  handleClearItems,
   message,
   addOpeningHours,
   openingHours,
@@ -22,11 +30,35 @@ const OpeningHours = ({
             openingHour={openingHour}
             handleInput={handleInput}
             handleDays={handleDays}
+            handleDeleteItem={handleDeleteItem}
           />
         );
       })}
 
       <div className="section-add-opening-hours">
+        {length === 1 ? (
+          <button
+            type="button"
+            onClick={handleClearItems}
+            className="add-opening-hours-btn disabled mr-small"
+          >
+            <span>
+              <ClearIcon icon="icon disabled-icon" />
+            </span>
+            CLEAR
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={handleClearItems}
+            className="add-opening-hours-btn mr-small"
+          >
+            <span>
+              <ClearIcon icon="icon icon-blue" />
+            </span>
+            CLEAR
+          </button>
+        )}
         <button
           type="button"
           onClick={addOpeningHours}

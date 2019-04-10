@@ -3,12 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 3rem;
+  padding: 1.5rem 3rem;
 }
 
 .navigation-items {
   display: flex;
   align-items: center;
+  margin-right: 20rem;
 }
 
 .navigation-item {

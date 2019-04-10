@@ -27,7 +27,6 @@
 .section-opening-hours {
   margin-top: 6rem;
   display: flex;
-  justify-content: space-between;
 }
 
 .text {
@@ -46,6 +45,7 @@
 .opening-hours-time-container {
   display: flex;
   align-items: center;
+  margin-left: 9.3rem;
 }
 
 .opening-hours-time:not(:last-child) {
@@ -142,9 +142,22 @@
   outline: none;
 }
 
+.disabled {
+  color: var(--inactive-color);
+}
+
+.disabled-icon {
+  fill: var(--inactive-color);
+  stroke: var(--inactive-color);
+  stroke-width: 1;
+  margin-right: 0.8rem;
+}
+
 .icon-blue {
   margin-right: 0.8rem;
   fill: var(--blue-color);
+  stroke: var(--blue-color);
+  stroke-width: 1;
 }
 
 .icon-white {
