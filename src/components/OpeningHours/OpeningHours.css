@@ -219,6 +219,7 @@
   border: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 1.6rem;
   width: 10.9rem;
   cursor: pointer;
@@ -237,4 +238,36 @@
 .btn-next {
   background-color: var(--blue-color);
   color: var(--main-color);
+}
+
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 57%;
+  }
+  .container {
+    width: 100rem;
+  }
+
+  .weekdays {
+    width: 5rem;
+  }
+
+  .opening-hours-input {
+    width: 9.5rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  html {
+    font-size: 56%;
+  }
+
+  .section-opening-hours {
+    display: block;
+    margin-top: 6rem;
+  }
+
+  .opening-hours-time-container {
+    margin: 1rem 0;
+  }
 }

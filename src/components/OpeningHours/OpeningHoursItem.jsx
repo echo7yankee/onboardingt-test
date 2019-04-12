@@ -66,15 +66,15 @@ const OpeningHoursItem = ({
             />
           </div>
         </div>
+        {index > 0 ? (
+          <span
+            onClick={() => handleDeleteItem(openingHour.id)}
+            className="ml mb-small"
+          >
+            <DeleteIcon icon={"icon delete-icon"} />
+          </span>
+        ) : null}
       </div>
-      {index > 0 ? (
-        <span
-          onClick={() => handleDeleteItem(openingHour.id)}
-          className="ml mb-small"
-        >
-          <DeleteIcon icon={"icon delete-icon"} />
-        </span>
-      ) : null}
     </div>
   );
 };

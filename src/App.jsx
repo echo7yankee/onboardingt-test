@@ -20,11 +20,8 @@ class App extends Component {
   };
 
   handleInput = (e, id) => {
-    //const rules = new RegExp(/^[0-9-:]+$/);
     const rules = new RegExp(/^[0-9-:]+$|^$/);
-
     const valid = rules.test(e.target.value);
-    console.log(valid);
 
     if (valid === false) {
       return;
@@ -111,7 +108,7 @@ class App extends Component {
         <Navigation />
         <div className="container">
           <Titles />
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} className="form">
             <OpeningHours
               length={this.state.openingHours.length}
               handleInput={this.handleInput}

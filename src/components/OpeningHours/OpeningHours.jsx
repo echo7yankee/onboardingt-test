@@ -90,14 +90,14 @@ const OpeningHours = ({
 
       <div className="section-forward">
         <button type="button" className="section-forward-btn btn-back">
-          <span>
+          <span className="allign-center">
             <BackArrowIcon icon="icon icon-blue" />
           </span>
           BACK
         </button>
         <button type="submit" className="section-forward-btn btn-next">
           NEXT
-          <span>
+          <span className="allign-center">
             <NextArrowIcon icon="icon icon-white icon-ml" />
           </span>
         </button>
